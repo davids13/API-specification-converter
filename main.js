@@ -1,7 +1,7 @@
 const Converter = require("api-spec-converter");
 const fs = require("fs");
 
-const fileSourcePath = "./bmw-ris-xl-after-sales-vehicles-api-oas.json";
+const fileSourcePath = "./swagger20example.yaml";
 
 // template: openApi3 to swagger
 const convertFromOpenApi = "openapi_3";
@@ -31,7 +31,7 @@ Converter.convert(
     console.log(converted.stringify(options2));
 
     convertFunc(
-      "./converted-files/bmw-ris-xl-after-sales-vehicles-api-oas",
+      "./converted-files/swagger20exampleOAS3.json",
       converted.stringify(options2)
     );
   }
